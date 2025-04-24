@@ -9,12 +9,24 @@
 /* component styling */
 @import '../server/components/card/card.css';
 
+:root {
+  --cardBackColor: #F4DAB7;
+  --cardTextColor: #242424;
+  --dndRed: #1daae6;
+}
+
 body {
   color: black;
   max-width: 1440px;
   margin: 0 auto;
+  background: linear-gradient(184deg,rgba(59, 59, 59, 1) 0%, rgba(33, 33, 33, 1) 100%);
 }
 
 main {
   padding: 1rem;
+  image-rendering: pixelated;
+}
+
+a {
+  text-decoration: none;
 }

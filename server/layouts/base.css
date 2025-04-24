@@ -1,5 +1,8 @@
 header {
   padding: 1rem;
+  box-shadow: 0 0px 10px black;
+  background-color: var(--cardBackColor);
+  border-radius: 0 0 10px 10px;
 }
 
 footer {

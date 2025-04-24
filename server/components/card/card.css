@@ -1,10 +1,42 @@
 .card {
   width: 100%;
   max-width: 300px;
+  height: 200px;
+
+  border-radius: 5%;
+
+  text-align: center;
+
+  color: var(--cardTextColor);
+  background-color: var(--cardBackColor);
+  transition: .2s;
 }
 
-.card__image {
-  width: 100%;
+.card:hover {
+  transform: translateY(-5%);
+  box-shadow:
+  0 1px 1px hsl(0deg 0% 0% / 0.275),
+  0 2px 2px hsl(0deg 0% 0% / 0.275),
+  0 4px 4px hsl(0deg 0% 0% / 0.275),
+  0 8px 8px hsl(0deg 0% 0% / 0.275),
+  0 16px 16px hsl(0deg 0% 0% / 0.275);
+
+  outline: solid;
+  outline-width: 5px;
+  outline-color: var(--dndRed);
+}
+
+.card>img {
+  position: absolute;
   height: auto;
   margin-top: 1rem;
+}
+
+.card h2 {
+  font-size: 2em;
+}
+
+.card h3 {
+  font-size: 4em;
+  transform: translate(0%, 50%);
 }

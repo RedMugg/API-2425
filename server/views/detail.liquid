@@ -1,6 +1,37 @@
 {% layout "server/layouts/base.liquid" %}
 
 {% block content %}
-<h1 class="h1">{{ item.name }}</h1>
-<img src="{{ item.image.src }}" alt="{{ item.image.alt }}" width="{{ item.image.width }}" height="{{ item.image.height }}" />
+  <section>
+    <h1 class="h1">
+      {{ spellsData.name }}
+    </h1>
+    <h2>
+      {{spellsData.classes[0].index}}
+      of atleast level
+      {{ spellsData.level}}
+    </h2>
+    <p>
+      {{spellsData.desc}}
+    </p>
+    <h3>
+      Attack Type:
+      {{spellsData.attack_type}}
+    </h3>
+    <h3>
+      Damage Type:
+      {{spellsData.damage.damage_type.index}}
+    </h3>
+
+    <h4>
+      Materials:
+      {{spellsData.material}}
+    </h4>
+
+    <h4>
+      Select Level:
+              Damage rolls:
+      {{spellsData.damage.damage_at_slot_level[spellsData.level]}}
+    </h4>
+  </section>
+
 {% endblock %}
